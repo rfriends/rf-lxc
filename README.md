@@ -8,6 +8,4 @@ cd rfriends_lxc
 sh rfriends_lxc.sh  
   
 インストール方法は以下が参考になります。  
-
-rfriends3のインストール手順（LXD/LXC編）  
-https://rfriends.hatenablog.com/entry/2023/07/19/222350
+[rfriends3のインストール手順（LXD/LXC編）](https://github.com/rfriends/rfriends_lxc/wiki)
