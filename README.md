@@ -4,8 +4,6 @@ cd ~/
 sudo apt install git  
 rm -rf rfriends_lxc  
 git clone https://github.com/rfriends/rfriends_lxc.git  
-cd rfriends_lxc  
-sh rfriends_lxc.sh  
   
 インストール方法は以下を参照してください。  
 [rfriends3のインストール手順（LXD/LXC編）](https://github.com/rfriends/rfriends_lxc/wiki)
