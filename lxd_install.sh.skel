@@ -5,38 +5,12 @@ useradd -m -s /bin/bash rfriendsuser
 #passwd rfriendsuser
 gpasswd  -a rfriendsuser sudo
 
-
-
 # git install
 apt-get install git -y
 
 # rfriends_install.shをユーザディレクトリにコピーし実行
 cp rfriends_install.sh /home/$user/rfriends_install.sh
-chown $user:$user /home/$user/rfriends_install.sh
+chown rfriendsuser:rfriendsuser /home/rfriendsuser/rfriends_install.sh
 su rfriendsuser -c "sh /home/rfriendsuser/rfriends_install.sh"
 
-
-
-# コンテナ作成
-sudo lxc launch $image $rfriendscont
-# lxd_install.shをルートディレクトリにコピー
-sudo lxc file push lxd_install.sh $rfriendscont//root/lxd_install.sh 
-# rfriendsuser,shを実行
-sudo lxc exec $rfriendscont -- sh lxd_install.sh
-exit 0
-pwd
-whoami
-cd ~/  
-rm -rf rfriends_ubuntu
-git clone https://github.com/rfriends/rfriends_ubuntu.git
-cd rfriends_ubuntu  
-sh rfriends_ubuntu.sh  
-hostname -i
-exit
-EOF
-
-sudo lxc launch ubuntu/20.04 $1
-sudo lxc file push p.sh $1//root/p.sh 
-sudo lxc file push p2.sh $1//root/p2.sh 
-sudo lxc exec $1 -- sh p.sh
 exit
