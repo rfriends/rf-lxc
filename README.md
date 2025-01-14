@@ -8,7 +8,7 @@ git clone https://github.com/rfriends/rfriends_lxd.git
 cd rfriends_lxd  
 sh rfriends_lxd.sh  
 
-上記操作のみでrfriends3のインストールはできますが、詳細な方法は以下を参照してください。  
+上記操作のみで簡単にrfriends3のインストールはできますが、詳細な方法は以下を参照してください。  
 [rfriends3のインストール手順（LXD編）](https://github.com/rfriends/rfriends_lxd/wiki)
 
 以下のサイトが非常に参考になります。  
