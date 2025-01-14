@@ -1,6 +1,8 @@
-lxd環境でrfriends3を動作させる方法は以下を参照してください。  
+lxd環境でrfriends3を動作させるスクリプトです。
 ホストはubuntuを想定しています。
-  
+
+
+lxd環境でrfriends3をインストールする詳細な方法は以下を参照してください。  
 [rfriends3のインストール手順（LXD編）](https://github.com/rfriends/rfriends_lxd/wiki)
 
 以下のサイトが非常に参考になります。  
