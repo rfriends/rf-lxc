@@ -26,4 +26,10 @@ sudo lxc file push lxd_install.sh $cont/$rootdir/lxd_install.sh
 # lxd_install.sh を実行
 sudo lxc exec $cont -- sh $rootdir/lxd_install.sh 
 
+# IPアドレス
+sudo lxc list $cont
+echo
+echo コンテナがRUNNINGであることを確認したら、
+echo ホストのWebブラウザで、IPアドレス:8000 でアクセスしてください
+
 exit 0
