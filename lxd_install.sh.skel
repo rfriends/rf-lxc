@@ -9,7 +9,7 @@ gpasswd  -a rfriendsuser sudo
 apt-get install git -y
 
 # rfriends_install.shをユーザディレクトリにコピーし実行
-cp rfriends_install.sh /home/$user/rfriends_install.sh
+cp rfriends_install.sh /home/rfriendsuser/rfriends_install.sh
 chown rfriendsuser:rfriendsuser /home/rfriendsuser/rfriends_install.sh
 su rfriendsuser -c "sh /home/rfriendsuser/rfriends_install.sh"
 
