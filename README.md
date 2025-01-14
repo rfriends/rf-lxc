@@ -1,5 +1,5 @@
 lxd環境でrfriends3を動作させるスクリプトです。  
-ホストはubuntuを想定しています。  
+LXDのインストールは済で、ホストはubuntuを想定しています。  
   
 cd ~/  
 sudo apt-get install git -y  
