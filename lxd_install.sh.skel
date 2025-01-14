@@ -5,6 +5,9 @@ useradd -m -s /bin/bash rfriendsuser
 #passwd rfriendsuser
 gpasswd  -a rfriendsuser sudo
 
+# タイムゾーン設定
+ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+
 # git install
 apt-get install git -y
 
