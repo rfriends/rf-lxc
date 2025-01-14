@@ -1,37 +1,29 @@
 #!/bin/bash
 #
-# コンテナ名、ユーザ名、イメージは変更可
+# イメージ、コンテナ名、ユーザ名は変更可
+image=ubuntu:24.04
 cont=rfriends3
 user=radio
-image=ubuntu:24.04
+#
+rootdir=/root
 #
 echo LXD easy install start
+echo
+echo image : $image
 echo contena : $cont
 echo user : $user
 
-inssh=rfriends_install
-# make user
-cat <<EOF > user.sh
-#!/bin/bash
-
-# ユーザ作成
-useradd -m -s /bin/bash $user
-#passwd $user
-gpasswd  -a $user sudo
-
-# git install
-apt-get install git -y  
-
-# インストールshをユーザディレクトリにコピーし実行
-cp rfriends_install.sh /home/$user/rfriends_install.sh
-chown $user:$user /home/$user/rfriends_install.sh
-su $user -c "sh /home/$user/rfriends_install.sh"
-EOF
-
 # コンテナ作成
 sudo lxc launch $image $cont
-# user.shをルートディレクトリにコピー
-sudo lxc file push user.sh $cont//root/user.sh 
-# user,shを実行
-sudo lxc exec $cont -- sh user.sh
+
+# rfriends_install.shをルートディレクトリにコピー
+sudo lxc file push rfriends_install.sh $cont/$rootdir/rfriends_install.sh 
+
+# lxd_install.shをルートディレクトリにコピー
+sed -e s%rfriendsuser%$user%g lxd_install.sh.skel > lxd_install.sh
+sudo lxc file push lxd_install.sh $cont/$rootdir/lxd_install.sh 
+
+# lxd_install.sh を実行
+sudo lxc exec $cont -- sh $rootdir/lxd_install.sh 
+
 exit 0
