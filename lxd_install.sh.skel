@@ -8,6 +8,12 @@ gpasswd  -a rfriendsuser sudo
 # git install
 apt-get install git -y
 
+# NOPASSWD（dangerous）
+grep "^rfriendsuser ALL=(ALL:ALL) NOPASSWD: ALL" /etc/sudoers > /dev/null
+if [ $? = 1]; then
+  echo "rfriendsuser ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
+fi
+
 # rfriends_install.shをユーザディレクトリにコピーし実行
 cp rfriends_install.sh /home/rfriendsuser/rfriends_install.sh
 chown rfriendsuser:rfriendsuser /home/rfriendsuser/rfriends_install.sh
