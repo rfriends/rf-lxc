@@ -9,8 +9,9 @@ gpasswd  -a rfriendsuser sudo
 apt-get install git -y
 
 # NOPASSWD（dangerous）
-grep "^rfriendsuser ALL=(ALL:ALL) NOPASSWD: ALL" /etc/sudoers > /dev/null
-if [ $? = 1]; then
+grep "rfriendsuser ALL=(ALL:ALL) NOPASSWD: ALL" /etc/sudoers > /dev/null
+if [ $? = 1 ]; then
+  echo add NOPASSWD
   echo "rfriendsuser ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 fi
 
