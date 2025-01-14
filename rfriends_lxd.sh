@@ -17,7 +17,7 @@ echo user : $user
 sudo lxc launch $image $cont
 
 # rfriends_install.shをルートディレクトリにコピー
-sudo lxc file push rfriends_install.sh $cont/$rootdir/rfriends_install.sh 
+sudo lxc file push rfriends_install.sh.skel $cont/$rootdir/rfriends_install.sh 
 
 # lxd_install.shをルートディレクトリにコピー
 sed -e s%rfriendsuser%$user%g lxd_install.sh.skel > lxd_install.sh
