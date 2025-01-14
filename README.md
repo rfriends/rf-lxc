@@ -1,4 +1,4 @@
-rfriends_lxdはxd環境でrfriends3を動作させるスクリプトです。  
+rfriends_lxdはlxd環境でrfriends3を動作させるスクリプトです。  
 ホストはubuntuを想定しています。
   
 cd ~/  
