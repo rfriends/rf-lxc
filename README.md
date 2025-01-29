@@ -11,5 +11,3 @@ sh rfriends_lxd.sh
 インストール方法は以下を参照してください。  
 https://github.com/rfriends/rfriends/blob/gh-pages/distro/lxd.md
   
-以下のサイトが非常に参考になります。  
-[Dockerに疲れた人のためのLXDではじめるシステムコンテナ入門](https://speakerdeck.com/devops_vtj/dockernipi-retaren-notamenolxddehazimerusisutemukontenaru-men)
