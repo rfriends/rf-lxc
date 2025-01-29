@@ -8,8 +8,8 @@ git clone https://github.com/rfriends/rfriends_lxd.git
 cd rfriends_lxd  
 sh rfriends_lxd.sh  
 
-上記操作のみで簡単にrfriends3のインストールはできますが、詳細な方法は以下を参照してください。  
-[rfriends3のインストール手順（LXD編）](https://github.com/rfriends/rfriends_lxd/wiki)
-
+インストール方法は以下を参照してください。  
+https://github.com/rfriends/rfriends/blob/gh-pages/distro/lxd.md
+  
 以下のサイトが非常に参考になります。  
 [Dockerに疲れた人のためのLXDではじめるシステムコンテナ入門](https://speakerdeck.com/devops_vtj/dockernipi-retaren-notamenolxddehazimerusisutemukontenaru-men)
