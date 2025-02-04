@@ -9,5 +9,6 @@ cd rfriends_lxd
 sh rfriends_lxd.sh  
 
 インストール方法は以下を参照してください。  
-https://github.com/rfriends/rfriends/blob/gh-pages/distro/lxd.md
+https://rfriends.github.io/rfriends/distro/lxd.html  
+  
   
